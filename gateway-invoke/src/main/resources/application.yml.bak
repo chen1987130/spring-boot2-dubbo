@@ -1,0 +1,30 @@
+#服务器配置
+server:
+  port: 8094
+
+spring:
+  application:
+    name: gateway-invoke
+  cloud:
+    consul:
+      host: 10.176.16.35
+      port: 8500
+      discovery:
+        register: false
+
+feign:
+  client:
+    config:
+      gateway-provide:
+        readTimeout: 60000
+        connectTimeout: 2000
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000

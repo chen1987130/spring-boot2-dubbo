@@ -11,6 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud-version>Finchley.RELEASE</spring-cloud-version>
+        <spring-boot-admin-version>2.0.3</spring-boot-admin-version>
         <dubbo-version>0.2.0</dubbo-version>
         <kbao-dubbo-version>1.0.0-SNAPSHOT</kbao-dubbo-version>
     </properties>
@@ -37,6 +38,12 @@
                 <groupId>com.alibaba.boot</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <version>${dubbo-version}</version>
+            </dependency>
+            <!-- spring-boot-admin -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring-boot-admin-version}</version>
             </dependency>
             <!-- 本地项目 -->
             <dependency>
@@ -71,6 +78,7 @@
         <module>gateway-invoke</module>
         <module>gateway</module>
         <module>gateway-api</module>
+        <module>spring-boot-admin</module>
     </modules>
 
     <build>

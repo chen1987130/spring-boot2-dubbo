@@ -1,0 +1,46 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: spring-boot-admin
+  cloud:
+    config:
+      enabled: false
+    consul:
+      host: 10.176.16.35
+      port: 8500
+      discovery:
+        register: false
+
+  profiles:
+    active:
+      - secure
+  boot:
+    admin:
+      discovery:
+        ignored-services:
+          - consul
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+---
+spring:
+  profiles: insecure
+
+---
+spring:
+  profiles: secure
+  security:
+    user:
+      name: "admin"
+      password: "123456"
+

@@ -20,11 +20,6 @@
             <groupId>com.kbao</groupId>
             <artifactId>gateway-api</artifactId>
         </dependency>
-        <!-- Web应用
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>-->
         <!-- Web应用 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -14,9 +14,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @since V1.0
  */
 @EnableHystrix
-@SpringBootApplication(scanBasePackages = "com.kbao")
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = "com.kbao.api")
+@SpringBootApplication(scanBasePackages = "com.kbao")
 public class InvokeApp {
 
     public static void main(String[] args) {
